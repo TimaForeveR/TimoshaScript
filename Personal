@@ -349,7 +349,6 @@ if bool then
             getgenv().promptpurchaserequestedv2:Disconnect()
             discord:Notification("Stopped", "Stopped waiting for any free UGC item to be prompted...", "Okay!")
         end
-      end
     end)
 WeLoveCat5:CreateToggle("Снайпер В2", function(value)
 end)
