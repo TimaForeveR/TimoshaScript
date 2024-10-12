@@ -302,6 +302,8 @@ end) ;
 
 --[[ 4th Section Credit ]]--
 
+WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
+
 cat = PhantomForcesWindow:NewSection("Дополнительное")
 
 cat:CreateButton("Призвать Мишу", function()
