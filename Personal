@@ -145,26 +145,6 @@ else
 end ;
 end) ;
 
-WeLoveCat:CreateButton("Плеер Хаб 1", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimiteds.lua"))()
-if V10 then
-  Sound(6150774030, 0.1)
-  task.wait(.1)
-  Notify("V1 PlayerHub Loaded", 3)
-else
-  Notify("V1 PlayerHub Loaded", 3)
-end ; 
-end) ;
-
-WeLoveCat:CreateButton("Плеер Хаб 2", function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimitedsV2.lua')))()
-  if V10 then
-  Sound(6150774030, 0.1)
-    task.wait(.1)
-    Notify("V2 Player Hub Loaded", 3)
-  else
-    Notify("V2 Player Hub Loaded", 3)
-  end ;
-end) ;
-
 --[[ 2nd Section UGC Script ]]--
 local WeLoveCat2 = PhantomForcesWindow:NewSection("УГС")  
 
@@ -283,16 +263,6 @@ WeLoveCat2:CreateButton("Проверка Адонисов", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
 end)
 
-WeLoveCat2:CreateButton("Обход Адониса", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua", true))() --[[ AdonisCries Is Famous Adonis Bypasser and The Only working The Catch is it's Ofbuscate But Ton Player used it and nothing Happen or any Bad ]]-- 
-  if V10 then
-    Sound(6150774030, 0.1)
-    task.wait(.1)
-    Notify("Bypassed!", 3)
-  else
-    Notify("Bypassed!", 3)
-  end ;
-end) ;
-
 --[[ Firing Function 3rd Section ]]--
 
 WeLoveCat3 = PhantomForcesWindow:NewSection("Файры")
@@ -332,9 +302,9 @@ end) ;
 
 --[[ 4th Section Credit ]]--
 
-cat = PhantomForcesWindow:NewSection("Призвать Мишу")
+cat = PhantomForcesWindow:NewSection("Дополнительное")
 
-cat:CreateButton("Миша Призван!", function()
+cat:CreateButton("Призвать Мишу", function()
     game:GetService("StarterGui"):SetCore("SendNotification", { 
  Title = "Миша";
  Text = "ПРИВЕТ Я МИША...";
@@ -348,7 +318,7 @@ cat:CreateButton("Уничтожить Гуи", function()
     Sound(6150774030, 0.1)
 end) ;
 
-cat:CreateToggle("Enabled Sound", function(value)
+cat:CreateToggle("Включить Звук", function(value)
     getgenv().V10 = value 
 end) ;
 
