@@ -108,7 +108,7 @@ PhantomForcesWindow = Library:NewWindow("Тимоша Скрипт " .. ThisActu
 
 WeLoveCat = PhantomForcesWindow:NewSection("Скрипты")
 --[[ Hub Script ]] --
-WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TimaForeveR/GODZILKA/refs/heads/main/WYVERN",true))()
+WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://discord-kitten.fun/p/raw/pl6mjl4xoy"))()
 
   Sound(6150774030, 0.1)
 Notify("Wyvern Loading.....",3)
@@ -135,7 +135,7 @@ else
 end ;
 end) ;
 
-WeLoveCat:CreateButton("Великий Декс", function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+WeLoveCat:CreateButton("Декс", function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 if V10 then
   Sound(6150774030, 0.1)
   task.wait(.1)
