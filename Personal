@@ -145,6 +145,16 @@ else
 end ;
 end) ;
 
+WeLoveCat:CreateButton("Снайпер Взятя", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/AutoSniper",true))()
+if V10 then 
+  Sound(6150774030, 0.1)
+  task.wait(.1)
+  Notify("SimpleSpy Loaded", 3)
+else
+  Notify("SimpleSpy Loaded", 3)
+end ;
+end) ;
+
 --[[ 2nd Section UGC Script ]]--
 local WeLoveCat2 = PhantomForcesWindow:NewSection("УГС")  
 
