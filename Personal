@@ -304,50 +304,6 @@ end) ;
 
 WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
 WeLoveCat5:CreateToggle("Снайпер В1", function(value)
-SniperActive = value
-    spawn(function()
-        while SniperActive do
-            getrenv()._set = clonefunction(setthreadidentity)
-            local old
-            old = hookmetamethod(game, "__index", function(a, b)
-                task.spawn(function()
-                    _set(7)
-                    task.wait()
-                    getgenv().promptpurchaserequestedv2 = MarketplaceService.PromptPurchaseRequestedV2:Connect(
-                        function(...)
-                            local startTime = tick()
-                            t = {...}
-                            local assetId = t[2]
-                            local info = MarketplaceService:GetProductInfo(assetId)
-                            pcall(function()
-                                local starttickxd = tick()
-                                local data = '{"collectibleItemId":"' .. tostring(info.CollectibleItemId) ..
-                                     '","collectibleProductId":"' .. tostring(info.CollectibleProductId) ..
-                                     '","expectedCurrency":1,"expectedPrice":' .. tostring(info.PriceInRobux) ..
-                                     ',"idempotencyKey":"' ..
-                                     tostring(game:GetService("HttpService"):GenerateGUID(false)) ..
-                                     '","expectedSellerId":' .. tostring(info.Creator.Id) .. ',"expectedSellerType":"' ..
-                                     tostring(info.Creator.CreatorType) ..
-                                     '","expectedPurchaserType":"User","expectedPurchaserId":' ..
-                                     tostring(game.Players.LocalPlayer.UserId) .. '}'
-                                print(data)
-                                -- setclipboard(data)
-                                _post("https://apis.roblox.com/marketplace-sales/v1/item/" .. tostring(info.CollectibleItemId) .."/purchase-item", data);
-                                wait();
-                                local endTime = tick()
-                                local duration = endTime - startTime
-                                print("Bought Item! Took " .. tostring(duration) .. " seconds")
-                            end)
-                        end)
-                    end)
-                hookmetamethod(game, "__index", old)
-                return old(a, b)
-            end)
-        else
-            getgenv().promptpurchaserequestedv2:Disconnect()
-            discord:Notification("Stopped", "Stopped waiting for any free UGC item to be prompted...", "Okay!")
-           end
-        end)
     end)
 
 WeLoveCat5:CreateToggle("Снайпер В2", function(value)
