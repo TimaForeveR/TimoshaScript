@@ -305,6 +305,7 @@ end) ;
 WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
 WeLoveCat5:CreateToggle("Снайпер В1", function(bool)  
 if bool then
+            discord:Notification("Waiting", "Waiting for any free UGC item to be prompted...", "Okay!")
             getrenv()._set = clonefunction(setthreadidentity)
             local old
             old = hookmetamethod(game, "__index", function(a, b)
@@ -313,6 +314,9 @@ if bool then
                     task.wait()
                     getgenv().promptpurchaserequestedv2 = MarketplaceService.PromptPurchaseRequestedV2:Connect(
                         function(...)
+                            discord:Notification("Prompt Detected",
+                                "If this is a UGC item, this script will attempt purchase. Please check console.",
+                                "Okay!")
                             local startTime = tick()
                             t = {...}
                             local assetId = t[2]
@@ -334,6 +338,7 @@ if bool then
                                 wait();
                                 local endTime = tick()
                                 local duration = endTime - startTime
+                                print("Bought Item! Took " .. tostring(duration) .. " seconds")
                             end)
                         end)
                     end)
@@ -342,9 +347,10 @@ if bool then
             end)
         else
             getgenv().promptpurchaserequestedv2:Disconnect()
+            discord:Notification("Stopped", "Stopped waiting for any free UGC item to be prompted...", "Okay!")
         end
     end)
-
+    end)
 WeLoveCat5:CreateToggle("Снайпер В2", function(value)
 end)
 
