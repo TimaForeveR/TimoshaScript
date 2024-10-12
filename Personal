@@ -104,7 +104,7 @@ function ThisActuallyCool()
     end
 end
 
-PhantomForcesWindow = Library:NewWindow("Тимоша Скрипт" .. ThisActuallyCool())
+PhantomForcesWindow = Library:NewWindow("Тимоша Скрипт " .. ThisActuallyCool())
 
 WeLoveCat = PhantomForcesWindow:NewSection("Скрипты")
 --[[ Hub Script ]] --
@@ -303,6 +303,11 @@ end) ;
 --[[ 4th Section Credit ]]--
 
 WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
+WeLoveCat5:CreateToggle("Снайпер В1", function(value)  
+end)
+
+WeLoveCat5:CreateToggle("Снайпер В2", function(value)
+end)
 
 cat = PhantomForcesWindow:NewSection("Дополнительное")
 
