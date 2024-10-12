@@ -305,7 +305,6 @@ end) ;
 WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
 WeLoveCat5:CreateToggle("Снайпер В1", function(bool)  
 if bool then
-            
             getrenv()._set = clonefunction(setthreadidentity)
             local old
             old = hookmetamethod(game, "__index", function(a, b)
@@ -335,7 +334,6 @@ if bool then
                                 wait();
                                 local endTime = tick()
                                 local duration = endTime - startTime
-                                print("Bought Item! Took " .. tostring(duration) .. " seconds")
                             end)
                         end)
                     end)
@@ -344,7 +342,6 @@ if bool then
             end)
         else
             getgenv().promptpurchaserequestedv2:Disconnect()
-            
         end
     end)
 
