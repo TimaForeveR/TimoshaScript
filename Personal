@@ -165,25 +165,6 @@ WeLoveCat:CreateButton("Плеер Хаб 2", function() loadstring(game:HttpGet
   end ;
 end) ;
 
-WeLoveCat:CreateButton("Хуйня Бесполезная", function() 
-local owner = "Hosvile"
-local branch = "revision"
-
-function webImport(file)
-    return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/MC-Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
-end
-
-webImport("init") ;
-webImport("ui/main") ;
-  if V10 then
-  Sound(6150774030, 0.1)
-    task.wait(.1)
-    Notify("Hydroxide Loaded", 3)
-  else
-    Notify("Hydroxide Loaded", 3)
-  end ;
-end) ;
-
 --[[ 2nd Section UGC Script ]]--
 local WeLoveCat2 = PhantomForcesWindow:NewSection("УГС")  
 
@@ -251,7 +232,7 @@ WeLoveCat2:CreateToggle("Авто Клос Еррор", function(value)
 end) ;
 
 
-WeLoveCat2:CreateButton("Tween Create", function()
+WeLoveCat2:CreateButton("Создать Твин", function()
    
    local po = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local x, y, z = math.floor(po.X), math.floor(po.Y), math.floor(po.Z)
@@ -265,7 +246,7 @@ local x, y, z = math.floor(po.X), math.floor(po.Y), math.floor(po.Z)
 setclipboard(twn)
  Notify("Copied! On your clipboard", 3)
 end)
-WeLoveCat2:CreateButton("Teleport Create", function() 
+WeLoveCat2:CreateButton("Создать ТП", function() 
     CframeGen()
   if V10 then
     Sound(6150774030, 0.1)
@@ -277,7 +258,7 @@ WeLoveCat2:CreateButton("Teleport Create", function()
 end) ;
 
 
-WeLoveCat2:CreateButton("Hide Player Loop", function() 
+WeLoveCat2:CreateButton("Убрать Игроков", function() 
     HidePlayer()
     if V10 then
     Sound(6150774030, 0.1)
@@ -288,7 +269,7 @@ WeLoveCat2:CreateButton("Hide Player Loop", function()
     end ;
 end) ;
 
-WeLoveCat2:CreateButton("Delete Proximity CD", function() 
+WeLoveCat2:CreateButton("Удалить Задержку Кнопок", function() 
     DelPP()
   if V10 then
     Sound(6150774030, 0.1)
@@ -298,11 +279,11 @@ WeLoveCat2:CreateButton("Delete Proximity CD", function()
   end ;
 end) ;
 
-WeLoveCat2:CreateButton("Adonis Checker", function() 
+WeLoveCat2:CreateButton("Проверка Адонисов", function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
 end)
 
-WeLoveCat2:CreateButton("Adonis Bypassed", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua", true))() --[[ AdonisCries Is Famous Adonis Bypasser and The Only working The Catch is it's Ofbuscate But Ton Player used it and nothing Happen or any Bad ]]-- 
+WeLoveCat2:CreateButton("Обход Адониса", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua", true))() --[[ AdonisCries Is Famous Adonis Bypasser and The Only working The Catch is it's Ofbuscate But Ton Player used it and nothing Happen or any Bad ]]-- 
   if V10 then
     Sound(6150774030, 0.1)
     task.wait(.1)
@@ -314,9 +295,9 @@ end) ;
 
 --[[ Firing Function 3rd Section ]]--
 
-WeLoveCat3 = PhantomForcesWindow:NewSection("Firing")
+WeLoveCat3 = PhantomForcesWindow:NewSection("Файры")
 
-WeLoveCat3:CreateButton("Touchinterests", function()
+WeLoveCat3:CreateButton("Тоучинтерестс", function()
     Touchinterest()
   if V10 then
     Sound(6150774030, 0.1)
@@ -327,7 +308,7 @@ WeLoveCat3:CreateButton("Touchinterests", function()
   end ;
 end) ;
 
-WeLoveCat3:CreateButton("Clickedetector", function()
+WeLoveCat3:CreateButton("Кликдетектор", function()
     ClickDet()
   if V10 then
     Sound(6150774030, 0.1)
@@ -338,7 +319,7 @@ WeLoveCat3:CreateButton("Clickedetector", function()
   end ;
 end) ;
 
-WeLoveCat3:CreateButton("ProximityPrompt", function()
+WeLoveCat3:CreateButton("ПромикситиПромпт", function()
     proxi()
     if V10 then
         Sound(6150774030, 0.1)
@@ -351,14 +332,17 @@ end) ;
 
 --[[ 4th Section Credit ]]--
 
-cat = PhantomForcesWindow:NewSection("Discord")
+cat = PhantomForcesWindow:NewSection("Призвать Мишу")
 
-cat:CreateButton("Support By Joining", function()
-    setclipboard("https://discord.com/invite/7t4j478wG6")
-    Sound(6150774030, 0.1)
+cat:CreateButton("Миша Призван!", function()
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+ Title = "Миша";
+ Text = "ПРИВЕТ Я МИША...";
+ Icon = "rbxthumb://type=Asset&id=77853045819302&w=150&h=150"})
+Duration = 10;
 end) ;
 
-cat:CreateButton("Destroy Gui", function()
+cat:CreateButton("Уничтожить Гуи", function()
     game.CoreGui.WizardLibrary:Destroy()
     Notify("Library Destroy", 3)
     Sound(6150774030, 0.1)
