@@ -108,7 +108,7 @@ PhantomForcesWindow = Library:NewWindow("Тимоша Скрипт " .. ThisActu
 
 WeLoveCat = PhantomForcesWindow:NewSection("Скрипты")
 --[[ Hub Script ]] --
-WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://discord-kitten.fun/p/raw/pl6mjl4xoy"))()
+WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-WYERN-TOOL-18176"))()
 
   Sound(6150774030, 0.1)
 Notify("Wyvern Loading.....",3)
