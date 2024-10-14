@@ -270,10 +270,7 @@ WeLoveCat2:CreateButton("Удалить Задержку Кнопок", function
 end) ;
 
 WeLoveCat2:CreateButton("Скопировать Цикл", function()
-setclipboard("while true do
-
-wait()
-end")
+setclipboard("while true do wait() end)
 end) ;
 
 
