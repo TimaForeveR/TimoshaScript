@@ -312,7 +312,7 @@ end) ;
 
 --[[ 4th Section Credit ]]--
 
-WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
+WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер (В разработке)")
 WeLoveCat5:CreateToggle("Снайпер В1", function(value)
     end)
 
