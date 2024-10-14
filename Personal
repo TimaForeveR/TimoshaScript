@@ -269,6 +269,16 @@ WeLoveCat2:CreateButton("Удалить Задержку Кнопок", function
   end ;
 end) ;
 
+WeLoveCat2:CreateButton("Скопировать Цикл", function()
+setclipboard("while true do
+
+wait()
+end")
+end ;
+end) ;
+
+
+
 WeLoveCat2:CreateButton("Проверка Адонисов", function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
 end)
