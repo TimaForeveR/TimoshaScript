@@ -1,11 +1,4 @@
---[[ All Hubs/Script Are Come From Trustful Sources And If Some Code Aren't Working Please DM ikura0 In discord and report It Lr U Can request What to Add ]]--
-
-
---[[ Notification]]--
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Notifier/main/Ping.lua"))()
-
---[[ Anti AFK ]]--
 
 iku = coroutine.create(function() 
  VirtualUser = game:GetService("VirtualUser")
@@ -15,8 +8,6 @@ iku = coroutine.create(function()
     end)
 end) 
 coroutine.resume(iku)
-
---[[ Random function ]]--
 
 function ClickDet()
     spawn(function()
@@ -111,7 +102,7 @@ WeLoveCat = PhantomForcesWindow:NewSection("Скрипты")
 WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-WYERN-TOOL-18176"))()
 
   Sound(6150774030, 0.1)
-Notify("Wyvern Loading.....",3)
+Notify("Загрузка Виверна...",3)
   
 end)
 
@@ -312,7 +303,7 @@ end) ;
 
 --[[ 4th Section Credit ]]--
 
-WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер (В разработке)")
+WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер (Не готов)")
 WeLoveCat5:CreateToggle("Снайпер В1", function(value)
     end)
 
