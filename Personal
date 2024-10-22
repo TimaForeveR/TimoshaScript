@@ -264,6 +264,10 @@ WeLoveCat2:CreateButton("Проверка Адонисов", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
 end)
 
+WeLoveCat2:CreateButton("Саопировать Байайтем", function() 
+setclipboard("!buyitem")
+end)
+
 --[[ Firing Function 3rd Section ]]--
 
 WeLoveCat3 = PhantomForcesWindow:NewSection("Файры")
