@@ -202,8 +202,12 @@ WeLoveCat2:CreateButton("Проверка Адонисов", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
 end)
 
-WeLoveCat2:CreateButton("Саопировать Байайтем", function() 
+WeLoveCat2:CreateButton("Скопировать Байайтем", function() 
 setclipboard("!buyitem")
+end)
+
+WeLoveCat2:CreateButton("Скопировать Байассет", function() 
+setclipboard("!buyasset")
 end)
 
 --[[ Firing Function 3rd Section ]]--
