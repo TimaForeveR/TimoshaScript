@@ -189,16 +189,18 @@ WeLoveCat2:CreateButton("Удалить Задержку Кнопок", function
   end ;
 end) ;
 
-WeLoveCat2:CreateButton("Проверка Адонисов", function() 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
-end)
 
-WeLoveCat2:CreateButton("Скопировать Байайтем", function() 
+local WeLoveCat7 = PhantomForcesWindow:NewSection("УГС 2")  
+WeLoveCat7:CreateButton("Скопировать Байайтем", function() 
 setclipboard("!buyitem")
 end)
 
-WeLoveCat2:CreateButton("Скопировать Байассет", function() 
+WeLoveCat7:CreateButton("Скопировать Байассет", function() 
 setclipboard("!buyasset")
+end)
+
+WeLoveCat7:CreateButton("Проверка Адонисов", function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
 end)
 
 --[[ Firing Function 3rd Section ]]--
