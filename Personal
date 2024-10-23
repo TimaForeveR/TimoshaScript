@@ -312,11 +312,8 @@ WeLoveCat5:CreateToggle("Авто Клос Еррор", function(value)
  end ;
 end) ;
 
-WeLoveCat5:CreateToggle("Снайпер В1", function(value)
+WeLoveCat5:CreateButton("Вуверн Снайп", function()
     end)
-
-WeLoveCat5:CreateToggle("Снайпер В2", function(value)
-end)
 
 cat = PhantomForcesWindow:NewSection("Дополнительное")
 
