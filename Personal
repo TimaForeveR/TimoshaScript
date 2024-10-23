@@ -313,6 +313,18 @@ WeLoveCat5:CreateToggle("Авто Клос Еррор", function(value)
 end) ;
 
 WeLoveCat5:CreateButton("Вуверн Снайп", function()
+getgenv().WyvernConfig = {
+    ["Change Log"] = false,
+    ["Home"] = false,
+    ["UGC Limiteds"] = true,
+    ["Remotes"] = false,
+    ["Games"] = false,
+    ["Players"] = false,
+    ["Network"] = false,
+    ["Input Automations"] = false,
+    ["Purchase Exploits"] = false,
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TimaForeveR/Wyvern/refs/heads/main/pl6mjl4xoy%20(1).txt"))()
     end)
 
 cat = PhantomForcesWindow:NewSection("Дополнительное")
