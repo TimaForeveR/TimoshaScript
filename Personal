@@ -249,7 +249,7 @@ end) ;
 
 --[[ 4th Section Credit ]]--
 
-WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер (Не готов)")
+WeLoveCat5 = PhantomForcesWindow:NewSection("Снайпер")
 
 local ClickingSpeed = 0
 local x, y, m = 55, 65.5, 1
