@@ -1,5 +1,15 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Notifier/main/Ping.lua"))()
 
+local player = game.Players.LocalPlayer
+local exemptPlayers = {
+967848364
+6108013511
+}
+
+if not table.find(exemptPlayers, player.UserId) then
+  player:Kick("не в вайтлисте")
+end
+
 iku = coroutine.create(function() 
  VirtualUser = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:Connect(function()
