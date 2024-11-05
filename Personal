@@ -2,8 +2,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Notifier
 
 local players = game:GetService("Players")
 
--- Срабатывает, когда игрок подключается к хабу
-function onPlayerAdded(player)
   -- Ваш код для кикания игроков
   local exemptPlayers = {
 967848364
