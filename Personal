@@ -1,6 +1,7 @@
 local player = game.Players.LocalPlayer
 local exemptPlayers = {
-
+967848364
+6108013511
 }
 
 if not table.find(exemptPlayers, player.UserId) then
