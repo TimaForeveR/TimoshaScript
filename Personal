@@ -1,3 +1,12 @@
+local player = game.Players.LocalPlayer
+local exemptPlayers = {
+
+}
+
+if not table.find(exemptPlayers, player.UserId) then
+  player:Kick("tell me what you done")
+end
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Notifier/main/Ping.lua"))()
 
 local players = game:GetService("Players")
