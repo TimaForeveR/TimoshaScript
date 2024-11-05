@@ -1,14 +1,26 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Notifier/main/Ping.lua"))()
 
-local player = game.Players.LocalPlayer
-local exemptPlayers = {
-967848364
-6108013511
-}
+local players = game:GetService("Players")
 
-if not table.find(exemptPlayers, player.UserId) then
-  player:Kick("не в вайтлисте")
+-- Срабатывает, когда игрок подключается к хабу
+function onPlayerAdded(player)
+  -- Ваш код для кикания игроков
+  local exemptPlayers = {
+    -- Добавьте сюда идентификаторы игроков, которых вы хотите исключить
+    -- Например:
+    -- 123456789,
+    -- 987654321
+  }
+
+  if not table.find(exemptPlayers, player.UserId) then
+    player:Kick("tell me what you done")
+  end
 end
+
+players.PlayerAdded:Connect(onPlayerAdded)
+
+-- Другие действия, которые должны происходить в хабе
+-- ...
 
 iku = coroutine.create(function() 
  VirtualUser = game:GetService("VirtualUser")
