@@ -2,19 +2,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Notifier
 
 local players = game:GetService("Players")
 
-  -- Ваш код для кикания игроков
-  local exemptPlayers = {
-967848364
-  }
-
-  if not table.find(exemptPlayers, player.UserId) then
-    player:Kick("tell me what you done")
-  end
-end
-
--- Другие действия, которые должны происходить в хабе
--- ...
-
 iku = coroutine.create(function() 
  VirtualUser = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:Connect(function()
