@@ -6,10 +6,7 @@ local players = game:GetService("Players")
 function onPlayerAdded(player)
   -- Ваш код для кикания игроков
   local exemptPlayers = {
-    -- Добавьте сюда идентификаторы игроков, которых вы хотите исключить
-    -- Например:
-    -- 123456789,
-    -- 987654321
+967848364
   }
 
   if not table.find(exemptPlayers, player.UserId) then
