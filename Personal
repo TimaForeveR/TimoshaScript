@@ -14,8 +14,6 @@ function onPlayerAdded(player)
   end
 end
 
-players.PlayerAdded:Connect(onPlayerAdded)
-
 -- Другие действия, которые должны происходить в хабе
 -- ...
 
