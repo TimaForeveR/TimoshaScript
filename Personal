@@ -236,6 +236,7 @@ RunService.Heartbeat:Connect(function(deltaTime)
   local timeInSeconds = tick()
   timeTextLabel.Text = formatTime(timeInSeconds)
 end
+end
 end)
 
 local WeLoveCat7 = PhantomForcesWindow:NewSection("УГС 2")  
