@@ -194,7 +194,7 @@ end) ;
 
 WeLoveCat7:CreateToggle("Таймер", function(value)  
     loopActive = value
-    while loopActive do 
+        while loopActive and task.wait(0,5) do
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 
@@ -235,7 +235,6 @@ timeTextLabel.Font = Enum.Font.SourceSansBold
 RunService.Heartbeat:Connect(function(deltaTime)
   local timeInSeconds = tick()
   timeTextLabel.Text = formatTime(timeInSeconds)
-end
 end
 end)
 
