@@ -192,6 +192,51 @@ WeLoveCat2:CreateButton("Удалить Задержку Кнопок", function
   end ;
 end) ;
 
+WeLoveCat7:CreateToggle("Таймер", function(value)  
+    loopActive = value
+    while loopActive do 
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+
+local function formatTime(time)
+  local minutes = string.format("%02d", math.floor((time % 3600) / 60))
+  local seconds = string.format("%02d", math.floor(time % 60))
+  return minutes .. ":" .. seconds
+end
+
+local timeLabel = Instance.new("ScreenGui")
+timeLabel.Name = "TimeDisplay"
+timeLabel.Parent = game.Players.LocalPlayer.PlayerGui
+
+local byTimaLabel = Instance.new("TextLabel")
+byTimaLabel.Parent = timeLabel
+byTimaLabel.Position = UDim2.new(0.01, 0, 0.14, 0)
+byTimaLabel.Size = UDim2.new(0.15, 0, 0.05, 0)
+byTimaLabel.BackgroundTransparency = 1
+byTimaLabel.TextColor3 = Color3.new(1, 0.647, 0)
+byTimaLabel.TextScaled = true
+byTimaLabel.TextWrapped = true
+byTimaLabel.Text = "By Tima"
+byTimaLabel.Font = Enum.Font.SourceSansBold
+
+
+local timeTextLabel = Instance.new("TextLabel")
+timeTextLabel.Parent = timeLabel
+timeTextLabel.Position = UDim2.new(0.01, 0, 0.05, 0) 
+timeTextLabel.Size = UDim2.new(0.15, 0, 0.1, 0)
+timeTextLabel.BackgroundTransparency = 1
+timeTextLabel.TextColor3 = Color3.new(1, 1, 1)
+timeTextLabel.TextScaled = true
+timeTextLabel.TextWrapped = true
+timeTextLabel.Text = "Loading Time..."
+timeTextLabel.Font = Enum.Font.SourceSansBold
+
+
+RunService.Heartbeat:Connect(function(deltaTime)
+  local timeInSeconds = tick()
+  timeTextLabel.Text = formatTime(timeInSeconds)
+end
+end)
 
 local WeLoveCat7 = PhantomForcesWindow:NewSection("УГС 2")  
 WeLoveCat7:CreateButton("Скопировать Байайтем", function() 
