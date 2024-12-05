@@ -137,7 +137,7 @@ else
 end ;
 end) ;
 
-WeLoveCat:CreateButton("Виверн", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/TimaForeveR/Timer/refs/heads/main/Timosha'))()
+WeLoveCat:CreateButton("Тайм Скрипт", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/TimaForeveR/Timer/refs/heads/main/Timosha'))()
   Sound(6150774030, 0.1)
 Notify("Загрузка Виверна...",3)
 end)
