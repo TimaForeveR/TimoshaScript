@@ -103,10 +103,8 @@ PhantomForcesWindow = Library:NewWindow("Тимоша Скрипт " .. ThisActu
 WeLoveCat = PhantomForcesWindow:NewSection("Скрипты")
 --[[ Hub Script ]] --
 WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua",true))()
-
   Sound(6150774030, 0.1)
 Notify("Загрузка Виверна...",3)
-  
 end)
 
 WeLoveCat:CreateButton("Инф елд", function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -138,6 +136,11 @@ else
   Notify("Dex V3 Loaded", 3)
 end ;
 end) ;
+
+WeLoveCat:CreateButton("Виверн", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/TimaForeveR/Timer/refs/heads/main/Timosha'))()
+  Sound(6150774030, 0.1)
+Notify("Загрузка Виверна...",3)
+end)
 
 
 --[[ 2nd Section UGC Script ]]--
@@ -306,21 +309,6 @@ WeLoveCat5:CreateToggle("Авто Клос Еррор", function(value)
    Notify("Auto Close Error\n" .. tostring(loopActive), 3)
  end ;
 end) ;
-
-WeLoveCat5:CreateButton("Вуверн Снайп", function()
-getgenv().WyvernConfig = {
-    ["Change Log"] = false,
-    ["Home"] = false,
-    ["UGC Limiteds"] = true,
-    ["Remotes"] = false,
-    ["Games"] = false,
-    ["Players"] = false,
-    ["Network"] = false,
-    ["Input Automations"] = false,
-    ["Purchase Exploits"] = false,
-}
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TimaForeveR/Wyvern/refs/heads/main/pl6mjl4xoy%20(1).txt"))()
-    end)
 
 WeLoveCat5:CreateButton("Снайпер Взятя", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/AutoSniper",true))()
 if V10 then 
