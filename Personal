@@ -200,12 +200,21 @@ WeLoveCat7:CreateButton("Скопировать Байайтем", function()
 setclipboard("!buyitem")
 end)
 
-WeLoveCat7:CreateButton("Скопировать Байассет", function() 
-setclipboard("!buyasset")
-end)
 
 WeLoveCat7:CreateButton("Проверка Адонисов", function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
+end)
+
+WeLoveCat7:CreateButton("Уничтожить Флюкс", function()
+    game.CoreGui.FluxusAndroidUI:Destroy()
+    Notify("Fluxus Destroy", 3)
+    Sound(6150774030, 0.1)
+end) ;
+
+WeLoveCat7:CreateButton("Уничтожить Гуи", function()
+    game.CoreGui.WizardLibrary:Destroy()
+    Notify("Library Destroy", 3)
+    Sound(6150774030, 0.1)
 end)
 
 --[[ Firing Function 3rd Section ]]--
@@ -319,31 +328,3 @@ else
   Notify("SimpleSpy Loaded", 3)
 end ;
 end) ;
-
-cat = PhantomForcesWindow:NewSection("Дополнительное")
-
-cat:CreateButton("Призвать Мишу", function()
-    game:GetService("StarterGui"):SetCore("SendNotification", { 
- Title = "Миша";
- Text = "ПРИВЕТ Я МИША...";
- Icon = "rbxthumb://type=Asset&id=77853045819302&w=150&h=150"})
-Duration = 10;
-end) ;
-
-cat:CreateButton("Уничтожить Флюкс", function()
-    game.CoreGui.FluxusAndroidUI:Destroy()
-    Notify("Fluxus Destroy", 3)
-    Sound(6150774030, 0.1)
-end) ;
-
-cat:CreateButton("Уничтожить Гуи", function()
-    game.CoreGui.WizardLibrary:Destroy()
-    Notify("Library Destroy", 3)
-    Sound(6150774030, 0.1)
-end) ;
-
-cat:CreateToggle("Включить Звук", function(value)
-    getgenv().V10 = value 
-end) ;
-
-Notify(" Just A Script ", 3)
