@@ -104,16 +104,16 @@ WeLoveCat = PhantomForcesWindow:NewSection("Скрипты")
 --[[ Hub Script ]] --
 WeLoveCat:CreateButton("Виверн", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/wyvernleaker/WYVERN/main/WYVERN.lua",true))()
   Sound(6150774030, 0.1)
-Notify("Загрузка Виверна...",3)
+Notify("Виверн загрузился",3)
 end)
 
 WeLoveCat:CreateButton("Инф елд", function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 if V10 then
   Sound(6150774030, 0.1)
   task.wait(.1)
-  Notify("Infinite Yield Loaded", 3)
+  Notify("Инф елд загрузился", 3)
 else
-  Notify("Infinite Yield Loaded", 3)
+  Notify("Инф елд загрузился", 3)
 end ;
 end) ;
 
@@ -121,9 +121,9 @@ WeLoveCat:CreateButton("Ремотспай", function() loadstring(game:HttpGet(
 if V10 then 
   Sound(6150774030, 0.1)
   task.wait(.1)
-  Notify("SimpleSpy Loaded", 3)
+  Notify("Ремотспай загрузился", 3)
 else
-  Notify("SimpleSpy Loaded", 3)
+  Notify("Ремотспай загрузился", 3)
 end ;
 end) ;
 
@@ -131,15 +131,15 @@ WeLoveCat:CreateButton("Декс", function()   loadstring(game:HttpGet("https:/
 if V10 then
   Sound(6150774030, 0.1)
   task.wait(.1)
-  Notify("Dex V3 Loaded", 3)
+  Notify("Декс загрузился", 3)
 else
-  Notify("Dex V3 Loaded", 3)
+  Notify("Декс загрузился", 3)
 end ;
 end) ;
 
 WeLoveCat:CreateButton("Тайм Скрипт", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/TimaForeveR/Timer/refs/heads/main/Timosha'))()
   Sound(6150774030, 0.1)
-Notify("Загрузка Виверна...",3)
+Notify("Таймер загрузился",3)
 end)
 
 
@@ -195,26 +195,8 @@ WeLoveCat2:CreateButton("Удалить Задержку Кнопок", function
   end ;
 end) ;
 
-local WeLoveCat7 = PhantomForcesWindow:NewSection("УГС 2")  
-WeLoveCat7:CreateButton("Скопировать Байайтем", function() 
-setclipboard("!buyitem")
-end)
-
-
-WeLoveCat7:CreateButton("Проверка Адонисов", function() 
+WeLoveCat2:CreateButton("Проверка Адонисов", function() 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
-end)
-
-WeLoveCat7:CreateButton("Уничтожить Флюкс", function()
-    game.CoreGui.FluxusAndroidUI:Destroy()
-    Notify("Fluxus Destroy", 3)
-    Sound(6150774030, 0.1)
-end) ;
-
-WeLoveCat7:CreateButton("Уничтожить Гуи", function()
-    game.CoreGui.WizardLibrary:Destroy()
-    Notify("Library Destroy", 3)
-    Sound(6150774030, 0.1)
 end)
 
 --[[ Firing Function 3rd Section ]]--
@@ -328,3 +310,17 @@ else
   Notify("SimpleSpy Loaded", 3)
 end ;
 end) ;
+
+local WeLoveCat7 = PhantomForcesWindow:NewSection("Дополнительное")  
+
+WeLoveCat7:CreateButton("Уничтожить Флюкс", function()
+    game.CoreGui.FluxusAndroidUI:Destroy()
+    Notify("Fluxus Destroy", 3)
+    Sound(6150774030, 0.1)
+end) ;
+
+WeLoveCat7:CreateButton("Уничтожить Гуи", function()
+    game.CoreGui.WizardLibrary:Destroy()
+    Notify("Library Destroy", 3)
+    Sound(6150774030, 0.1)
+end)
